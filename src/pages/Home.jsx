@@ -13,7 +13,7 @@ function Home() {
     setStatus(null);
 
     try {
-      const res = await fetch('https://webdev-backend-0bwn.onrender.com', {
+      const res = await fetch('https://webdev-backend-0bwn.onrender.com/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
@@ -28,6 +28,7 @@ function Home() {
         setStatus(data.error || 'Something went wrong.');
       }
     } catch (error) {
+      console.error('Network error:', error);
       setStatus('Network error. Please try again later.');
     }
   };
