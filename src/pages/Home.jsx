@@ -13,7 +13,7 @@ function Home() {
     setStatus(null);
 
     try {
-      const res = await fetch('http://localhost:5000/api/contact', {
+      const res = await fetch('https://webdev-backend-0bwn.onrender.com', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
@@ -34,8 +34,47 @@ function Home() {
 
   return (
     <>
-      {/* ... your other sections ... */}
+      {/* Hero Section */}
+      <section id="home" className="py-20 px-4 text-center bg-white">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-4xl font-extrabold mb-6">Beautiful, Affordable Websites</h2>
+          <p className="text-lg text-gray-600 mb-8">
+            I help small businesses stand out with fast, responsive websites tailored to your brand.
+          </p>
+          <a href="#contact" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition">
+            Get a Free Quote
+          </a>
+        </div>
+      </section>
 
+      {/* Services Section */}
+      <section id="services" className="py-20 px-4 bg-gray-50">
+        <div className="max-w-5xl mx-auto text-center">
+          <h3 className="text-3xl font-bold mb-12">Services</h3>
+          <div className="grid md:grid-cols-3 gap-8 text-left">
+            <div className="bg-white p-6 rounded-lg shadow">
+              <h4 className="text-xl font-semibold mb-2">Custom Website Design</h4>
+              <p className="text-gray-600">
+                Mobile-friendly, fast-loading, and designed for your brand.
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow">
+              <h4 className="text-xl font-semibold mb-2">Search Engine Optimization</h4>
+              <p className="text-gray-600">
+                Help your site show up on Google with optimized structure and metadata.
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow">
+              <h4 className="text-xl font-semibold mb-2">Ongoing Maintenance</h4>
+              <p className="text-gray-600">
+                Keep your website updated, secure, and running smoothly month to month.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
       <section id="contact" className="py-20 px-4 bg-white">
         <div className="max-w-3xl mx-auto text-center">
           <h3 className="text-3xl font-bold mb-6">Contact Me</h3>
